@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digital Thasbhi</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -19,8 +19,8 @@
     </script>
 </head>
 <body>
-    <div class="flex flex-col lg:flex-row lg:justify-around">
-        <div class="card w-96 bg-base-100 shadow-xl" id="subhanAllah">
+    <div class="flex flex-col lg:flex-row lg:justify-around gap-4">
+        <div class="card w-96 bg-base-100 shadow-xl mx-auto " id="subhanAllah">
             <div class="card-body">
                 <h2 class="card-title mx-auto">SubhanAllah</h2>
                 <p>Allah is perfect in each and every aspect without any defects</p>
@@ -31,10 +31,10 @@
                 </div>
             </div>
         </div>
-        <div class="card w-96 bg-base-100 shadow-xl" id="alhamdulillah">
+        <div class="card w-96 bg-base-100 shadow-xl mx-auto" id="alhamdulillah">
             <div class="card-body">
                 <h2 class="card-title mx-auto">Alhamdulillah</h2>
-                <p>Allah is perfect in each and every aspect without any defects</p>
+                <p>All praise and thanks be to Allah</p>
                 <h2 class="mx-auto text-5xl" id="alh-value">0</h2>
                 <div class="card-actions justify-center">
                     <button class="btn btn-primary text-3xl w-16 bg-green-600" id="plus2">+</button>
@@ -42,10 +42,10 @@
                 </div>
             </div>
         </div>
-        <div class="card w-96 bg-base-100 shadow-xl" id="allahhuakbar">
+        <div class="card w-96 bg-base-100 shadow-xl mx-auto" id="allahhuakbar">
             <div class="card-body">
                 <h2 class="card-title mx-auto">Allah hu Akbar</h2>
-                <p>Allah is perfect in each and every aspect without any defects</p>
+                <p>Allah is the greatest</p>
                 <h2 class="mx-auto text-5xl" id="aha-value">0</h2>
                 <div class="card-actions justify-center">
                     <button class="btn btn-primary text-3xl w-16 bg-green-600" id="plus3">+</button>
@@ -55,12 +55,14 @@
         </div>
         
     </div>
-    <div class="card w-96 bg-base-100 shadow-xl mx-auto m-8" >
+    <div class="card w-96 bg-base-100 shadow-xl mx-auto mx-auto m-8" >
         <div class="card-body">
-            <h2 class="card-title mx-auto">Total</h2>
-            <p>You said Total</p>
-            <h2 class="mx-auto text-5xl" id="total-value">0</h2>
             
+            <button class="btn btn-primary text-3xl w-20 mx-auto" id="total"> Total </button>
+            <p >You said Total</p>
+            <h2 class="mx-auto text-5xl" id="total-value">0</h2>
+                <p>Tasbhi</p>
+
         </div>
     </div>
     <script>
@@ -99,13 +101,14 @@
            allahhuakbar.innerText = sum3;
         })
         const total = document.getElementById('total-value');
-        let sum = 0;
-        document.getElementById('plus3').addEventListener('click',function(){
-           sum =sum3 + sum2 + sum1;
-
-           total.innerText = sum3;
-        })
+        
       
+         document.getElementById('total').addEventListener( "click", function () {
+          let sum = sum3 + sum2 + sum1;
+        console.log(sum)
+           total.innerText = sum;
+        
+         })
     </script>
 </body>
 </html>
