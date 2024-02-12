@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="flex flex-col lg:flex-row lg:justify-around">
+        <div class="card w-96 bg-base-100 shadow-xl" id="subhanAllah">
+            <div class="card-body">
+                <h2 class="card-title mx-auto">SubhanAllah</h2>
+                <p>Allah is perfect in each and every aspect without any defects</p>
+                <h2 class="mx-auto text-5xl" id="sub-value">0</h2>
+                <div class="card-actions justify-center">
+                    <button class="btn btn-primary text-3xl w-16 bg-green-600" id="plus1">+</button>
+                    <button class="btn btn-primary bg-red-600 border-none text-3xl hover:bg-red-700 bottom-4 w-16" id="minus1">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl" id="alhamdulillah">
+            <div class="card-body">
+                <h2 class="card-title mx-auto">Alhamdulillah</h2>
+                <p>Allah is perfect in each and every aspect without any defects</p>
+                <h2 class="mx-auto text-5xl" id="alh-value">0</h2>
+                <div class="card-actions justify-center">
+                    <button class="btn btn-primary text-3xl w-16 bg-green-600" id="plus2">+</button>
+                    <button class="btn btn-primary bg-red-600 border-none text-3xl hover:bg-red-700 bottom-4 w-16" id="minus2">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl" id="allahhuakbar">
+            <div class="card-body">
+                <h2 class="card-title mx-auto">Allah hu Akbar</h2>
+                <p>Allah is perfect in each and every aspect without any defects</p>
+                <h2 class="mx-auto text-5xl" id="aha-value">0</h2>
+                <div class="card-actions justify-center">
+                    <button class="btn btn-primary text-3xl w-16 bg-green-600" id="plus3">+</button>
+                    <button class="btn btn-primary bg-red-600 border-none text-3xl hover:bg-red-700 bottom-4 w-16" id="minus3">-</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="card w-96 bg-base-100 shadow-xl mx-auto m-8" >
+        <div class="card-body">
+            <h2 class="card-title mx-auto">Total</h2>
+            <p>You said Total</p>
+            <h2 class="mx-auto text-5xl" id="total-value">0</h2>
+            
+        </div>
+    </div>
+    <script>
+        const subhanAllah = document.getElementById('sub-value');
+        let sum1 = 0;
+        document.getElementById('plus1').addEventListener('click',function(){
+           sum1 =sum1 + 1;
+
+           subhanAllah.innerText = sum1;
+        })
+        document.getElementById('minus1').addEventListener('click',function(){
+           sum1 =sum1 - 1;
+           console.log(sum1);
+           subhanAllah.innerText = sum1;
+        })
+        const Alhamdulillah = document.getElementById('alh-value');
+        let sum2 = 0;
+        document.getElementById('plus2').addEventListener('click',function(){
+           sum2 =sum2 + 1;
+
+           Alhamdulillah.innerText = sum2;
+        })
+        document.getElementById('minus2').addEventListener('click',function(){
+           sum2 =sum2 - 1;
+           Alhamdulillah.innerText = sum2;
+        })
+        const allahhuakbar = document.getElementById('aha-value');
+        let sum3 = 0;
+        document.getElementById('plus3').addEventListener('click',function(){
+           sum3 =sum3 + 1;
+
+           allahhuakbar.innerText = sum3;
+        })
+        document.getElementById('minus3').addEventListener('click',function(){
+           sum3 =sum3 - 1;
+           allahhuakbar.innerText = sum3;
+        })
+        const total = document.getElementById('total-value');
+        let sum = 0;
+        document.getElementById('plus3').addEventListener('click',function(){
+           sum =sum3 + sum2 + sum1;
+
+           total.innerText = sum3;
+        })
+      
+    </script>
+</body>
+</html>
