@@ -26,8 +26,8 @@
                 <p>Allah is perfect in each and every aspect without any defects</p>
                 <h2 class="mx-auto text-5xl" id="sub-value">0</h2>
                 <div class="card-actions justify-center">
-                    <button class="btn btn-primary text-3xl w-16 bg-green-600" id="plus1">+</button>
-                    <button class="btn btn-primary bg-red-600 border-none text-3xl hover:bg-red-700 bottom-4 w-16" id="minus1">-</button>
+                    <button class="btn btn-primary text-3xl w-16 bg-green-600  total-trig" id="plus1">+</button>
+                    <button class="btn btn-primary bg-red-600 border-none text-3xl hover:bg-red-700 bottom-4 w-16 total-trig" id="minus1">-</button>
                 </div>
             </div>
         </div>
@@ -37,8 +37,8 @@
                 <p>All praise and thanks be to Allah</p>
                 <h2 class="mx-auto text-5xl" id="alh-value">0</h2>
                 <div class="card-actions justify-center">
-                    <button class="btn btn-primary text-3xl w-16 bg-green-600" id="plus2">+</button>
-                    <button class="btn btn-primary bg-red-600 border-none text-3xl hover:bg-red-700 bottom-4 w-16" id="minus2">-</button>
+                    <button class="btn btn-primary text-3xl w-16 bg-green-600 total-trig" id="plus2">+</button>
+                    <button class="btn btn-primary bg-red-600 border-none text-3xl hover:bg-red-700 bottom-4 w-16 total-trig" id="minus2">-</button>
                 </div>
             </div>
         </div>
@@ -48,8 +48,8 @@
                 <p>Allah is the greatest</p>
                 <h2 class="mx-auto text-5xl" id="aha-value">0</h2>
                 <div class="card-actions justify-center">
-                    <button class="btn btn-primary text-3xl w-16 bg-green-600" id="plus3">+</button>
-                    <button class="btn btn-primary bg-red-600 border-none text-3xl hover:bg-red-700 bottom-4 w-16" id="minus3">-</button>
+                    <button class="btn btn-primary text-3xl w-16 bg-green-600 total-trig" id="plus3">+</button>
+                    <button class="btn btn-primary bg-red-600 border-none text-3xl hover:bg-red-700 bottom-4 w-16 total-trig" id="minus3">-</button>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
     <div class="card w-96 bg-base-100 shadow-xl mx-auto mx-auto m-8" >
         <div class="card-body">
             
-            <button class="btn btn-primary text-3xl w-20 mx-auto" id="total"> Total </button>
+            <!-- <button class="btn btn-primary text-3xl w-20 mx-auto" id="total"> Total </button> -->
             <p >You said Total</p>
             <h2 class="mx-auto text-5xl" id="total-value">0</h2>
                 <p>Tasbhi</p>
@@ -102,13 +102,15 @@
         })
         const total = document.getElementById('total-value');
         
-      
-         document.getElementById('total').addEventListener( "click", function () {
+        const buttons = document.getElementsByClassName("total-trig")
+            for(let button of buttons ){
+         button.addEventListener( "click", function () {
           let sum = sum3 + sum2 + sum1;
         console.log(sum)
            total.innerText = sum;
         
          })
+        }
     </script>
 </body>
 </html>
